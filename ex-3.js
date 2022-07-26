@@ -1,3 +1,5 @@
+// Exercise #3: Array of Orders
+
 let orders = [
   {
     id: 1,
@@ -40,5 +42,8 @@ let orders = [
     creditCardType: "jcb",
   },
 ];
-
 // Start coding here
+let isArray;
+let creditCardTypeOfBlindermann;
+let totalPurchaseOfJoannet;
+let totalPurchaseOfDary;
