@@ -2,7 +2,7 @@
 let colors = ["red", "green", "blue", "khaki", "orange"];
 
 // Start coding here
-let firstColor;
-let secondColor;
-let thirdColor;
-let forthColor;
+let blueColor;
+let fourthColor;
+let fifthColor;
+let tenthColor;
