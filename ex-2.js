@@ -1,4 +1,4 @@
-Exercise #2: Editing Employee Array
+// Exercise #2: Editing Employee Array
 const employees = [
   {
     name: "James",
