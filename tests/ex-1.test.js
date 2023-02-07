@@ -12,6 +12,6 @@ describe("Array", () => {
     expect(blueColor).toEqual(colors[2]);
     expect(fourthColor).toEqual(colors[3]);
     expect(fifthColor).toEqual(colors[4]);
-    expect(tenthColor).toEqual(colors[10]);
+    expect(tenthColor).toEqual(colors[9]);
   });
 });
