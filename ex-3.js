@@ -42,6 +42,7 @@ let orders = [
     creditCardType: "jcb",
   },
 ];
+
 // Start coding here
 let isArray;
 let creditCardTypeOfBlindermann;

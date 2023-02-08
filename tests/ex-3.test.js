@@ -11,7 +11,7 @@ describe("Array", () => {
 
   test("Exercise 3 : isArray จะต้องมีค่าที่ถูกต้อง' ", async () => {
     const data = await fs.readFile("./ex-3.js");
-    const code = `${data} return isArray`;
+    const code = `${data}\n return isArray`;
 
     const func = new Function(code);
     const isArray = func();
