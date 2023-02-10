@@ -21,12 +21,23 @@ describe("Array", () => {
 
   test("Exercise 3 : creditCardTypeOfBlindermann จะต้องเป็นค่าที่ถูกต้อง ", async () => {
     const data = await fs.readFile("./ex-3.js");
-    const code = `${data} return {creditCardTypeOfBlindermann, orders}`;
+    const code = `${data} \n return {creditCardTypeOfBlindermann, orders}`;
 
     const func = new Function(code);
     const { creditCardTypeOfBlindermann, orders } = func();
 
-    expect(creditCardTypeOfBlindermann).toEqual("visa");
+    expect(creditCardTypeOfBlindermann).toEqual("switch");
+  });
+
+  test("Exercise 3 : creditCardType ของ orders[2] จะต้องเป็นค่าที่ถูกต้อง ", async () => {
+    const data = await fs.readFile("./ex-3.js");
+    const code = `${data} \n {return orders}`;
+
+    const func = new Function(code);
+    const orders = func();
+
+    console.log("log here", orders);
+    expect(orders[1].creditCardType).toEqual("visa");
   });
 
   test("Exercise 3 : totalPurchaseOfJoannet จะต้องเป็นค่าที่ถูกต้อง ", async () => {
