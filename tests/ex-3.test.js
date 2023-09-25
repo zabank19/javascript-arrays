@@ -35,8 +35,6 @@ describe("Array", () => {
 
     const func = new Function(code);
     const orders = func();
-
-    console.log("log here", orders);
     expect(orders[1].creditCardType).toEqual("visa");
   });
 
