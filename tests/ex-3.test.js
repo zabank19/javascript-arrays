@@ -1,103 +1,17 @@
 import fs from "fs/promises";
-import { jest } from "@jest/globals";
 
 describe("Array", () => {
-  beforeAll(() => {
-    jest.spyOn(console, "log");
-  });
-  afterAll(() => {
-    jest.resetAllMocks();
-  });
-
-  test("Exercise 3 : isArray จะต้องมีค่าที่ถูกต้อง' ", async () => {
+  test("Exercise: employees[0].hobbies จะต้องมีค่าที่ถูกต้อง ", async () => {
     const data = await fs.readFile("./ex-3.js");
-    const code = `${data}\n return isArray`;
+    const code = `${data} \n return { employees }`;
 
     const func = new Function(code);
-    const isArray = func();
+    const { employees } = func();
 
-    expect(isArray).toEqual(true);
-  });
-
-  test("Exercise 3 : creditCardTypeOfBlindermann จะต้องเป็นค่าที่ถูกต้อง ", async () => {
-    const data = await fs.readFile("./ex-3.js");
-    const code = `${data} \n return {creditCardTypeOfBlindermann, orders}`;
-
-    const func = new Function(code);
-    const { creditCardTypeOfBlindermann, orders } = func();
-
-    expect(creditCardTypeOfBlindermann).toEqual("switch");
-  });
-
-  test("Exercise 3 : creditCardType ของ orders[2] จะต้องเป็นค่าที่ถูกต้อง ", async () => {
-    const data = await fs.readFile("./ex-3.js");
-    const code = `${data} \n {return orders}`;
-
-    const func = new Function(code);
-    const orders = func();
-    expect(orders[1].creditCardType).toEqual("visa");
-  });
-
-  test("Exercise 3 : totalPurchaseOfJoannet จะต้องเป็นค่าที่ถูกต้อง ", async () => {
-    const data = await fs.readFile("./ex-3.js");
-    const code = `${data} return {totalPurchaseOfJoannet, orders}`;
-
-    const func = new Function(code);
-    const { totalPurchaseOfJoannet, orders } = func();
-
-    expect(totalPurchaseOfJoannet).toStrictEqual(96);
-  });
-
-  test("Exercise 3 : totalPurchaseOfDary จะต้องเป็นค่าที่ถูกต้อง ", async () => {
-    const data = await fs.readFile("./ex-3.js");
-    const code = `${data} return totalPurchaseOfDary`;
-
-    const func = new Function(code);
-    const totalPurchaseOfDary = func();
-
-    expect(totalPurchaseOfDary).toStrictEqual(934902);
-  });
-
-  test("Exercise 3 : orders จะต้องเป็นค่าที่ถูกต้อง ", async () => {
-    const data = await fs.readFile("./ex-3.js");
-    const code = `${data} return orders`;
-
-    const func = new Function(code);
-    const orders = func();
-
-    expect(orders).toEqual([
-      {
-        id: 2,
-        customerName: "Celia Dary",
-        productName: "Bread - Pumpernickle, Rounds",
-        productPrice: 10746,
-        productQuantity: 87,
-        creditCardType: "jcb",
-      },
-      {
-        id: 3,
-        customerName: "Toinette Blindermann",
-        productName: "Bar - Granola Trail Mix Fruit Nut",
-        productPrice: 94191,
-        productQuantity: 31,
-        creditCardType: "visa",
-      },
-      {
-        id: 4,
-        customerName: "Anjela Joannet",
-        productName: "Cheese - Parmesan Cubes",
-        productPrice: 5131,
-        productQuantity: 96,
-        creditCardType: "diners-club-carte-blanche",
-      },
-      {
-        id: 5,
-        customerName: "Kennith Bussons",
-        productName: "Wine - White, Pinot Grigio",
-        productPrice: 94432,
-        productQuantity: 75,
-        creditCardType: "jcb",
-      },
+    expect(employees[0].hobbies).toEqual([
+      "Cryptocurrency",
+      "Social media",
+      "Watching basketball",
     ]);
   });
 });

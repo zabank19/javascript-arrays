@@ -1,4 +1,3 @@
-// Exercise #2: Editing Employee Array
 const employees = [
   {
     name: "James",
@@ -15,4 +14,3 @@ const employees = [
 let alex;
 let alexHobbies;
 let alexAndJamesAge;
-const updateEmployees = employees;
