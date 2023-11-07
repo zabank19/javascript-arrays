@@ -1,8 +1,8 @@
 import fs from "fs/promises";
 
 describe("Array", () => {
-  test("Exercise: employees จะต้องมี Object ใหม่เพิ่มขึ้นมา ", async () => {
-    const data = await fs.readFile("./ex-4.js");
+  test("Exercise: ข้อมูลของ Kody ใน employees จะต้องถูกลบออกไป", async () => {
+    const data = await fs.readFile("./ex-5.js");
     const code = `${data} \n return { employees }`;
 
     const func = new Function(code);
@@ -16,9 +16,8 @@ describe("Array", () => {
         hobbies: ["Cryptocurrency", "Social media"],
       },
       { name: "Alicia", age: 29, hobbies: ["Shopping", "Reading novels"] },
-      { name: "Kody", age: 19, hobbies: ["Computer games", "Wakeboard"] },
     ]);
 
-    expect(employees.length).toEqual(4);
+    expect(employees.length).toEqual(3);
   });
 });

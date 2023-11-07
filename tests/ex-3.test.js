@@ -8,7 +8,7 @@ describe("Array", () => {
     const func = new Function(code);
     const { employees } = func();
 
-    expect(employees[0].hobbies).toEqual([
+    expect(employees[1].hobbies).toEqual([
       "Cryptocurrency",
       "Social media",
       "Watching basketball",
