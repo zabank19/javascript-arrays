@@ -44,5 +44,5 @@ let orders = [
 // Start coding here
 let isArray;
 let creditCardTypeOfBlindermann;
-let totalPurchaseOfJoannet;
+let productQuantityOfJoannet;
 let totalPurchaseOfDary;
